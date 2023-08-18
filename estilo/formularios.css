@@ -1,0 +1,111 @@
+ .inicio{
+    background: #bc4e9c;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to left, hsla(340, 95%, 50%, 0.514), hsla(317, 45%, 52%, 0.651)), 
+  url(../imagen/portada); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  background: linear-gradient(to left, hsla(340, 95%, 50%, 0.514), hsla(317, 45%, 52%, 0.651)),
+  url(../imagen/portada); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  
+    width: 400px;
+    padding: 20px;
+    margin: auto;
+    margin-top: 30px;
+    border-radius: 9px;
+    
+}
+
+.inicio h1{
+    margin-bottom: 20px;
+}
+
+input,select {
+    width: 90%;
+    background:rgb(224, 210, 231);
+    padding: 5px;
+    border-radius: 4px;
+    border:1px solid black;
+    margin-bottom: 15px;
+    font-size: 18px;
+}
+
+.boton{
+    width: 88%;
+    background: rgb(212, 158, 236);
+    padding: 10px;
+    border-radius:4px;
+    margin:20px;
+    font-size:16px;
+}
+
+
+.registro{
+    background: #bc4e9c;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to left, hsla(340, 95%, 50%, 0.514), hsla(317, 45%, 52%, 0.651)), 
+  url(../imagen/portada); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  background: linear-gradient(to left, hsla(340, 95%, 50%, 0.514), hsla(317, 45%, 52%, 0.651)),
+  url(../imagen/portada); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  
+    width: 400px;
+    padding: 20px;
+    margin: auto;
+    margin-top: 30px;
+    border-radius: 9px;
+}
+
+.registro h1{
+    margin-bottom: 20px;
+}
+
+input,select {
+    width: 90%;
+    background:rgb(224, 210, 231);
+    padding: 5px;
+    border-radius: 4px;
+    border:1px solid black;
+    margin-bottom: 15px;
+    font-size: 18px;
+}
+
+.boton{
+    width: 88%;
+    background: rgb(212, 158, 236);
+    padding: 10px;
+    border-radius:4px;
+    margin:20px;
+    font-size:16px;
+}
+
+
+.excusa{
+    background-color: rgb(187, 124, 238);
+    width: 400px;
+    padding: 20px;
+    margin: auto;
+    margin-top: 30px;
+    border-radius: 9px;
+    
+}
+
+.excusa h1{
+    margin-bottom: 20px;
+}
+
+.causa {
+    width: 90%;
+    height: 60px;
+    background:rgb(224, 210, 231);
+    padding: 20px;
+    border-radius: 4px;
+    border:1px solid black;
+    margin-bottom: 15px;
+    font-size: 18px;
+    
+}
+
+.boton{
+    width: 88%;
+    background: rgb(212, 158, 236);
+    padding: 10px;
+    border-radius:4px;
+    margin:20px;
+    font-size:16px;
+}
