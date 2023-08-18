@@ -2,47 +2,39 @@
 	session_start();
 	if(isset($_SESSION['user'])){ //verifica si hay session iniciada
 		if($_SESSION['tipo']==0){
+      $user=$_SESSION['nombre'];
+     		include('libreria.php');
 
 ?>
 <html>
-<head>			
-	<title></title>
-	<link rel="stylesheet" type="text/css" href="../estilo/estilo.css">
+<head>      
+<meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>index</title>
+    <link rel="stylesheet" href="../estilo/admin.css">
+    <link rel="stylesheet" href="<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700;800&display=swap" rel="stylesheet">
 </head>
-<body style="background-color:#D5D9EC">
-<table width=100% class="TabEncas">
-  <tr>
-    <td width="5%">
-    <td width="80%"><center><h1>EXCUSE ME<h1></center></td>
-    <td width="5%"><img src="imagen/escudo.jpg" width="80 px"></td>
-  </tr>
-  </table>
-
-  <NAV class="navbar "> 
-    <div>
-          <ul class="nav">
-            <li><a href="../index.php">Inicio</a></li>
-            <li><a href="#contenidos">Contenidos</a>
-              <ul>
-                <li><a href="mostrarusuarios.php"> usuarios</a></li>
-                <li><a href="excusas.php">excusas</a></li>
-                <li><a href="faltas.php">faltas</a></li>
-              </ul>
-
-            </li>
-            <li><a href="#registrar"></a>
-              <ul>
-                <li><a href=""></a></li>
-                <li><a href=""></a></li>
-              </ul>
-
-            </li>
-          </ul>
-        
-    </div><br>
-   </NAV><br><br>
+<body>
+<header>
+        <nav>
+          <a href="mostrar_excusas.php">Excusas</a>
+          <a href="#">Faltas</a>
+        </nav>
+        <section class="textos-header">
+            <h1>EXCUSE ME</h1>
+            <h2>Bienvenid@ <?php echo $user; ?> <h2>
+        </section>
+        <div class="ola" style="height: 150px; overflow: hidden;" ><svg viewBox="0 0 500 150" preserveAspectRatio="none" 
+        style="height: 100%; width: 100%;">
+        <path d="M0.00,49.98 C149.99,150.00 349.20,-49.98 500.00,49.98 L500.00,150.00 L0.00,150.00 Z"
+         style="stroke: none; fill: #ffffff;"></path></svg></div>
+    </header>
+   
 </body>
-			</html>
+      </html>
 
 			<?php
 		}
