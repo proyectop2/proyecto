@@ -43,7 +43,7 @@
       <input type="date" name="fecha" value=""><br><br>
 
       <label for="causa">CAUSA</label><br>
-      <input type="textarea" name="causa" class="causa" value=""><br><br>
+      <textarea name="causa" id="" cols="50" rows="3"></textarea>
 
       <input type="submit" name="boton1" value="ENVIAR EXCUSA"><br><br>
       <a href="admin.php">VOLVER..</a>
