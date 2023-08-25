@@ -2,13 +2,13 @@
 //para validar  la pagina
  
 if(isset($_POST['correo'])){
-    $correo=$_POST['correo'];
-    $clave=$_POST['clave'];
-    $consulta="select * from usuarios where correo='".$correo."'";
-    include('libreria.php');
-    $cnx=conectar();
+   include('libreria.php');
+   $correo=$_POST['correo'];
+   $clave=$_POST['clave'];
+   $consulta="select * from usuarios where correo='".$correo."'";
+   //  $cnx=conectar();
     //echo $consulta;
-    $user=mysqli_query($cnx,$consulta);
+    $user=mysqli_query($con,$consulta);
     $fila=mysqli_num_rows($user);
     if($fila==0){
         echo "<script type='text/javascript'>alert('EL USUARIO NO EXISTE!!');
@@ -17,7 +17,9 @@ if(isset($_POST['correo'])){
        }
        else{
        	   $a=mysqli_fetch_array($user);
-       	   if($a['clave']==$clave){
+            $c=$a['clave'];
+
+       	   if($c==$clave){
        		 session_start();
              $_SESSION['tipo']=$a['tipo'];
              $_SESSION['user']=$a['id_usuario'];
@@ -46,11 +48,15 @@ if(isset($_POST['correo'])){
                        break;
                } 
             }
-            else{   
-            echo "<script type='text/javascript'>alert('Clave incorrecta!');</script>";
+            else{  
+                 echo "incorrecta la clave ".$c."!=".$clave;    
+            // echo "<script type='text/javascript'>alert('Clave incorrecta!'.$c.' - '.$clave);</script>";
        		}
       
        }
 }
-?>
 
+?>
+<script>
+   // let c=parseInt(document.getElementById('$c'));
+</script>
