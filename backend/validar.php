@@ -49,8 +49,9 @@ if(isset($_POST['correo'])){
                } 
             }
             else{  
-                 echo "incorrecta la clave ".$c."!=".$clave;    
-            // echo "<script type='text/javascript'>alert('Clave incorrecta!'.$c.' - '.$clave);</script>";
+               echo "<script type='text/javascript'>
+               alert(''incorrecta la clave' .$c.'!='.$clave');
+             </script>";
        		}
       
        }
