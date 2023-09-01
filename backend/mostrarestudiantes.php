@@ -75,7 +75,7 @@ if(isset($_SESSION['user'])){ //verifica si hay session iniciada
             
            <tbody>
            <?php
-           while($vec= mysqli_fetch_array($resultado)){ ?>
+           while($vec=mysqli_fetch_array($resultado)){ ?>
             
             <tr>
                 <td width=20%><?php echo $vec['id_estudiante']; ?></td>
