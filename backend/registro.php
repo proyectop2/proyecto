@@ -1,40 +1,90 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-  <link rel="stylesheet" type="text/css" href="../estilo/formularios.css">
-	<title>registro</title>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="../estilo/inicio_sesion.css">
+  <link rel="stylesheet" href="../css/bootstrap.css">
 </head>
+<body>
+<section class="h-100 gradient-form" style="background-color: #eee;">
+  <div class="container py-5 h-100">
+    <div class="row d-flex justify-content-center align-items-center h-100">
+      <div class="col-xl-10">
+        <div class="card rounded-3 text-black">
+          <div class="row g-0">
+            <div class="col-lg-6">
+              <div class="card-body p-md-5 mx-md-4">
 
-<body >
-<br><center><h1>REGISTRO</h1>
-  <div class="registro">
- <form  action="" method="POST">
+                <form  action="validar.php" method="POST" >
+                  <p><h5>Registrate</h5></p>
 
-  <label for="id">IDENTIFICACION</label><br>
-  <input type="number" name="id" value=""><br><br>
+                
+                  <div class="form-outline mb-4">
+                    <input type="number" name="id" class="form-control" />
+                    <label class="form-label" for="id" name="id" >Identificacion</label>
+                  </div>
 
-  <label for="nombre">NOMBRE</label><br>
-  <input type="text" name="nombre" value=""><br><br>
+                  <div class="form-outline mb-4">
+                    <input type="text" name="nombre" class="form-control" />
+                    <label class="form-label" for="nombre" name="nombre" >Nombre</label>
+                  </div>
 
-  <label for="fecha">FECHA DE NACIMIENTO</label><br>
-  <input type="date" name="fecha" value=""><br><br>
+                  <div class="form-outline mb-4">
+                    <input type="date" name="fecha" class="form-control" />
+                    <label class="form-label" for="fecha" name="fecha" >Fecha</label>
+                  </div>
 
-  <label for="telefono">TELEFONO</label><br>
-  <input type="number" name="telefono" value=""><br><br>
+                  <div class="form-outline mb-4">
+                    <input type="text" name="telefono" class="form-control" />
+                    <label class="form-label" for="telefono" name="telefono" >Telefono</label>
+                  </div>
 
-  <label for="correo">CORREO ELECTRONICO</label><br>
-  <input type="mail" name="correo" value=""><br><br>
+                  <div class="form-outline mb-4">
+                    <input type="mail" name="correo" class="form-control" />
+                    <label class="form-label" for="correo" name="correo" >Correo</label>
+                  </div>
 
-  <label for="clave">CLAVE</label><br>
-  <input type="password" name="clave" value="" placeholder="MAXIMO OCHO DIGITOS"><br><br><br>
+                  <div class="form-outline mb-4">
+                    <input type="password" name="clave" class="form-control" />
+                    <label class="form-label" for="clave" name="clave" >Clave</label>
+                  </div>
 
-  <label for="confirmarclave">CONFIRMAR CLAVE</label><br>
-  <input type="password" name="confirmarclave" value="" placeholder="VUELVE A INGRESAR TU CLAVE"><br><br><br>
+                  <div class="form-outline mb-4">
+                    <input type="password" name="confirmarclave" class="form-control" />
+                    <label class="form-label" for="confirmarclave" name="confirmarclave" >Confirmar Clave</label>
+                  </div>
 
-  <input type="submit" name="boton" value="REGISTRAR"><br><br>
-  <a href="../index.php">VOLVER..</a>
-</form>
-</div>
-  </center>
+                  <div class="text-center pt-1 mb-5 pb-1">
+                    <input class="btn btn-primary btn-block fa-lg gradient-custom-2 mb-3" type="submit" name="boton" value="INICIAR"></input>
+                    
+                  </div>
+
+                  <div class="d-flex align-items-center justify-content-center pb-4">
+                    <a href="../index.php">Volver</button></a>
+                  </div>
+
+                </form>
+
+              </div>
+            </div>
+            <div class="col-lg-6 d-flex align-items-center gradient-custom-2">
+              <div class="text-white px-3 py-4 p-md-5 mx-md-4">
+              <div class="text-center">
+                  <img src="../imagen/lotus"
+                    style="width: 185px;" alt="logo">
+                  <h4 class="mt-1 mb-5 pb-1">Nosotros somos EXCUSE ME</h4>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 </body>
 </html>
 

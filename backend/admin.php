@@ -2,7 +2,7 @@
 	session_start();
 	if(isset($_SESSION['user'])){ //verifica si hay session iniciada
 		if($_SESSION['tipo']==3){
-			$user=$_SESSION['nombre'];
+			$user1=$_SESSION['nombre'];
      		include('libreria.php');
 			?>
 <html>
@@ -27,7 +27,7 @@
         </nav>
         <section class="textos-header">
             <h1>EXCUSE ME</h1>
-            <h2>Bienvenid@ <?php echo $user; ?> <h2>
+            <h2>Bienvenid@ <?php echo $user1; ?> <h2>
         </section>
         <div class="ola" style="height: 150px; overflow: hidden;" ><svg viewBox="0 0 500 150" preserveAspectRatio="none" 
         style="height: 100%; width: 100%;">

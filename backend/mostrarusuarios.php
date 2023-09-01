@@ -7,7 +7,7 @@ if(isset($_SESSION['user'])){ //verifica si hay session iniciada
 
             include("libreria.php");
             $conx=conectar();
-            $consult="SELECT * FROM usuarios";
+            $consulta="SELECT * FROM usuarios";
 
             ?>
             <!DOCTYPE html>
@@ -48,7 +48,7 @@ if(isset($_SESSION['user'])){ //verifica si hay session iniciada
                         $filtro=" where nombre like '%".$busqueda."%'"; 
                     
                     }
-                    $consult=$consult.$filtro;
+                    $consult=$consulta.$filtro;
                     $resultado=mysqli_query($conx,$consult);
                     ?></h2>
         </section>
