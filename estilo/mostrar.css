@@ -1,80 +1,150 @@
 *{
-    margin:auto;
-    padding:0;
-    box-sizing:border-box;
-  }
-  
-  body{
-    font-family: 'open sans';
-  }
-  
-  .contenedor{
-    padding: 60px 0;
-    width: 90%;
-    max-width: 1000px;
-    margin: auto;
-    overflow: hidden;
-  }
-  .titulo{
-    color: #642a73;
-    font-size: 30px;
-    text-align: center;
-    margin-bottom: 60px;
-  }
-  
-  /*header*/
-  
-  header{
-    width: 100%;
-    height: 600px;
-    background: #bc4e9c;  /* fallback for old browsers */
-    background: -webkit-linear-gradient(to left, hsla(340, 95%, 50%, 0.514), hsla(317, 45%, 52%, 0.651)), 
-    url(../imagen/portada); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-    background: linear-gradient(to left, hsla(340, 95%, 50%, 0.514), hsla(317, 45%, 52%, 0.651)),
-    url(../imagen/portada); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-    background-size: cover;
-    background-attachment: fixed;
-    position: relative;
-  }
-  nav{
-    text-align: right;
-    padding: 30px 50px 0 0;
-  }
-  
-  nav > a{
-    color: white;
-    font-weight: 300;
-    text-decoration: none;
-    margin-right: 10px;
-  }
-  
-  nav > a:hover{
-    text-decoration: underline;
-  }
-  
-  header .textos-header{
-    display:flex;
-    height: 430px;
-    width: 100%;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    text-align: center;
-  }
-  
-  .textos-header h1{
-    font-size: 50px;
-    color: white;
-  }
-  
-  .textos-header h2{
-    font-size: 30px;
-    font-weight: 300;
-    color: white;
-  }
-  
-  .ola{
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-  }
+  margin:auto;
+  padding:0;
+  box-sizing:border-box;
+}
+
+body{
+  font-family: 'open sans';
+}
+
+.contenedor{
+  padding: 60px 0;
+  width: 90%;
+  max-width: 1000px;
+  margin: auto;
+  overflow: hidden;
+}
+.titulo{
+  color: #642a73;
+  font-size: 30px;
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+/*header*/
+
+header{
+  width: 100%;
+  height: 350px;
+  background: #bc4e9c;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to left, hsla(340, 95%, 50%, 0.514), hsla(317, 45%, 52%, 0.651)), 
+  url(../imagen/portada); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  background: linear-gradient(to left, hsla(340, 95%, 50%, 0.514), hsla(317, 45%, 52%, 0.651)),
+  url(../imagen/portada); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  background-size: cover;
+  background-attachment: fixed;
+  position: relative;
+}
+nav{
+  text-align: right;
+  padding: 30px 50px 0 0;
+}
+
+nav > a{
+  color: white;
+  font-weight: 300;
+  text-decoration: none;
+  margin-right: 10px;
+}
+
+nav > a:hover{
+  text-decoration: underline;
+}
+
+header .textos-header{
+  display:flex;
+  height: 430px;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+}
+
+.textos-header h1{
+  font-size: 50px;
+  color: white;
+}
+
+.textos-header h2{
+  font-size: 30px;
+  font-weight: 300;
+  color: white;
+}
+
+.ola{
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
+
+.mostrar_estu{
+  border: solid 1px rgba(255, 255, 255, 0.2);
+}
+
+table{
+  font-size: 14px;
+  table-layout: fixed;
+  border-collapse: collapse;
+}
+
+thead{
+  background: rgba(247, 76, 193, 0.4);
+}
+
+th{
+  padding: 20px 15px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+td{
+  padding: 15px;
+  border-bottom: solid 1px rgba(255, 255, 255, 0.2);
+}
+
+tbody tr{
+  cursor: pointer;
+}
+
+tbody tr:hover {
+  background: rgba(243, 103, 199, 0.4);
+
+}
+
+
+
+.mostrar_usu{
+  border: solid 1px rgba(255, 255, 255, 0.2);
+}
+
+table{
+  font-size: 14px;
+  table-layout: fixed;
+  border-collapse: collapse;
+}
+
+thead{
+  background: rgba(247, 76, 193, 0.4);
+}
+
+th{
+  padding: 20px 15px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+td{
+  padding: 15px;
+  border-bottom: solid 1px rgba(255, 255, 255, 0.2);
+}
+
+tbody tr{
+  cursor: pointer;
+}
+
+tbody tr:hover {
+  background: rgba(243, 103, 199, 0.4);
+
+}

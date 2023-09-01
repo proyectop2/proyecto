@@ -4,10 +4,9 @@ if(isset($_SESSION['user'])){ //verifica si hay session iniciada
     if($_SESSION['tipo']==3){
         $user=$_SESSION['nombre'];
 
-include("libreria.php");
-$conx=conectar();
-$consult="SELECT estudiantes.codigo,estudiantes.id_estudiante,estudiantes.nombre,estudiantes.telefono,estudiantes.grupo,grupo.descripcion as grado FROM `estudiantes`  JOIN grupo on estudiantes.grupo=grupo.codigo";
-
+    include("libreria.php");
+     $consult="SELECT estudiantes.codigo,estudiantes.id_estudiante,estudiantes.nombre,estudiantes.telefono,estudiantes.grupo,grupo.descripcion as grado FROM `estudiantes`  JOIN grupo on estudiantes.grupo=grupo.codigo";
+     $c=mysqli_query($con,$consult);
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -44,11 +43,11 @@ $consult="SELECT estudiantes.codigo,estudiantes.id_estudiante,estudiantes.nombre
                     if(isset($_POST['boton'])){
                         $busqueda=$_POST['busca'];
                         //$buscar="select * from usuarios where nombre like '%".$busqueda."%'"; 
-                        $filtro=" where nombre like '%".$busqueda."%'"; 
+                        $filtro="select * from usuarios where nombre like '%".$busqueda."%'"; 
                     
                     }
-                    $consult=$consult.$filtro;
-                    $resultado=mysqli_query($conx,$consult);
+                    //$consult=$consult.$filtro;
+                    $resultado=mysqli_query($con,$consult);
                     ?></h2>
         </section>
         <div class="ola" style="height: 150px; overflow: hidden;" ><svg viewBox="0 0 500 150" preserveAspectRatio="none" 
@@ -58,18 +57,26 @@ $consult="SELECT estudiantes.codigo,estudiantes.id_estudiante,estudiantes.nombre
     </header>
 
 
-       <fieldset  style="Border: 2px solid darkblue">
-       <table style=" background-color:#03A9F4;width:100%">
+       <div class="mostrar_estu">
+       <table>
+       <thead>
            <tr>
-               <td width=20%>identificacion</td>
-               <td width=20%>nombres</td>
-               <td width=20%>Grado</td>
-               <td width=20%>Telefono</td>
-           </tr>  
+               <th>identificacion</th>
+               <th>nombres</th>
+               <th>Grado</th>
+               <th>Telefono</th>
+               <th></th>
+               <th></th>
+               <th></th>
+               
+           </tr> 
+        </thead>  
+      
             
+           <tbody>
            <?php
-           while($vec= mysqli_fetch_array($resultado)){ 
-            ?>
+           while($vec= mysqli_fetch_array($resultado)){ ?>
+            
             <tr>
                 <td width=20%><?php echo $vec['id_estudiante']; ?></td>
                 <td width=20%><?php echo $vec['nombre']; ?></td>
@@ -82,10 +89,15 @@ $consult="SELECT estudiantes.codigo,estudiantes.id_estudiante,estudiantes.nombre
             </tr>  
     
             <?php } ?>
+            </tbody>
             
 
+            
         </table>  
-        </fieldset>
+        <br><br>
+        </div>
+        
+
 </body> 
 </html>       
 <?php

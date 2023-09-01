@@ -6,9 +6,9 @@ if(isset($_SESSION['user'])){ //verifica si hay session iniciada
          
 
             include("libreria.php");
-            $conx=conectar();
-            $consulta="SELECT * FROM usuarios";
-
+            //$conx=conectar();
+            $consult="SELECT * FROM usuarios";
+            $c=mysqli_query($con,$consult);
             ?>
             <!DOCTYPE html>
             <html lang="en">
@@ -48,8 +48,8 @@ if(isset($_SESSION['user'])){ //verifica si hay session iniciada
                         $filtro=" where nombre like '%".$busqueda."%'"; 
                     
                     }
-                    $consult=$consulta.$filtro;
-                    $resultado=mysqli_query($conx,$consult);
+                    //$consult=$consult.$filtro;
+                    $resultado=mysqli_query($con,$consult);
                     ?></h2>
         </section>
         <div class="ola" style="height: 150px; overflow: hidden;" ><svg viewBox="0 0 500 150" preserveAspectRatio="none" 
@@ -62,16 +62,20 @@ if(isset($_SESSION['user'])){ //verifica si hay session iniciada
 
 
 
-                <fieldset  style="Border: 2px solid darkblue">
-                <table style=" background-color:#03A9F4;width:100%">
+                <div class="mostrar_usu">
+                <table>
+                    <thead>
                     <tr>
-                        <td width=20%>identificacion</td>
-                        <td width=20%>nombres</td>
-                        <td width=20%>Apellidos</td>
-                        <td width=20%>fecha de nacimiento</td>
-                        <td width=20%>correo electronico</td>
-                    </tr>  
-                        
+                        <th>identificacion</th>
+                        <th>nombres</th>
+                        <th>Apellidos</th>
+                        <th>fecha de nacimiento</th>
+                        <th>correo electronico</th>
+                        <th></th>
+                    </tr> 
+                    </thead> 
+
+                    <tbody>    
                     <?php
                     while($vec= mysqli_fetch_array($resultado)){ ?>
                         <tr>
@@ -87,10 +91,13 @@ if(isset($_SESSION['user'])){ //verifica si hay session iniciada
                         </tr>  
                 
                         <?php } ?>
+                        </tbody>
+
                         
 
                     </table>  
-                    </fieldset>
+                    <br><br>
+                    </div>
             </body> 
             </html>
         <?php  

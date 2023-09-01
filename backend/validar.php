@@ -28,16 +28,13 @@ if(isset($_POST['correo'])){
                    case 0:
                        echo "Bienvenido usuario";
                        header("location:usuario.php");
-
                     break;
+
                     case 1:
                        echo "Bienvenido profesor";
                        header("location:profesor.php");
                     break;
-                    case 2:
-                       echo "Bienvenido coordinador";
-                       header("location:coordi.php");
-                    break;
+                    
                     case 3:
                        echo "Bienvenido administrador";
                        header("location:admin.php");
@@ -48,14 +45,20 @@ if(isset($_POST['correo'])){
                        break;
                } 
             }
-            else{  
+            else{
                echo "<script type='text/javascript'>
-               alert(''incorrecta la clave' .$c.'!='.$clave');
-             </script>";
+               alert('clave incorrecta');
+               window.location.href='inicio.php'
+               </script>";
+               
+             }
+            
        		}
+
       
        }
-}
+       
+
 
 ?>
 <script>
